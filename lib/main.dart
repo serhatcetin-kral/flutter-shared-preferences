@@ -10,6 +10,10 @@ child: MyApp()));
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
+    Provider.of<ThemeColorData>(context,listen: false).loadThemeFroomSharedPref();
+
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: Provider.of<ThemeColorData>(context).themeColor,
